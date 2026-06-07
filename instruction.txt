@@ -1,0 +1,11 @@
+Giá đóng cửa phiên kế tiếp	         target_next_close	     Biến mục tiêu chính để huấn luyện và đánh giá mô hình dự báo giá.
+Tỷ suất biến động phiên kế tiếp	     target_return	         Biến mục tiêu phụ cho Random Forest, SVR và LSTM; sau đó quy đổi lại thành giá.
+Xu hướng phiên kế tiếp	             target_up             	 Biến giải thích tăng/giảm: 1 là tăng, 0 là giảm. Không dùng để hiển thị giá dự báo.
+
+Mô hình này học tỷ suất biến động của phiên kế tiếp rồi quy đổi lại thành giá đóng cửa, giúp dự báo không bị kẹt ở vùng giá cũ khi cổ phiếu tăng/giảm mạnh theo thời gian.
+ 
+  if model_name in ["Random Forest", "SVR", "LSTM"]:
+        st.caption(
+            "Mô hình này học tỷ suất biến động của phiên kế tiếp rồi quy đổi lại thành giá đóng cửa, "
+            "giúp dự báo không bị kẹt ở vùng giá cũ khi cổ phiếu tăng/giảm mạnh theo thời gian."
+        )
