@@ -774,11 +774,11 @@ def sync_data_panel(raw_df: pd.DataFrame, current_symbol: str) -> None:
         )
 
         today = date.today()
-        default_start = date(2020, 1, 1)
+        default_start = date(2015, 1, 1)
 
         start_date = st.date_input("Từ ngày", value=default_start)
         end_date = st.date_input("Đến ngày", value=today)
-        st.caption("Để lấy đủ dữ liệu lịch sử cho mô hình, nên để từ ngày 2020-01-01.")
+        st.caption("Để lấy đủ dữ liệu lịch sử cho mô hình, nên để từ ngày 2015-01-01.")
 
         if scope == "Mã đang chọn":
             symbols_to_sync = [current_symbol]
