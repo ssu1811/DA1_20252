@@ -1034,11 +1034,7 @@ def show_features(feature_df: pd.DataFrame, symbol_features: pd.DataFrame, symbo
     display_columns = [column for column in expected_columns if column in symbol_features.columns]
     missing_display_columns = [column for column in expected_columns if column not in symbol_features.columns]
 
-    if missing_display_columns:
-    '''    st.warning(
-            "Một số cột chưa có trong dữ liệu đặc trưng nên được ẩn khỏi bảng hiển thị: "
-            + ", ".join(missing_display_columns)
-        )'''
+
 
     display_df = symbol_features[display_columns].tail(120).rename(
         columns={
